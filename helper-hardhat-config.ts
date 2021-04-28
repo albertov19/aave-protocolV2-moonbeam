@@ -3,6 +3,7 @@ import {
   eEthereumNetwork,
   ePolygonNetwork,
   eXDaiNetwork,
+  eMoonbeam,
   iParamsPerNetwork,
 } from './helpers/types';
 
@@ -31,6 +32,8 @@ export const NETWORKS_RPC_URL: iParamsPerNetwork<string> = {
   [ePolygonNetwork.mumbai]: 'https://rpc-mumbai.maticvigil.com',
   [ePolygonNetwork.matic]: 'https://rpc-mainnet.matic.network',
   [eXDaiNetwork.xdai]: 'https://rpc.xdaichain.com/',
+  [eMoonbeam.dev]: 'http://localhost:9933/',
+  [eMoonbeam.moonbase]: 'https://rpc.testnet.moonbeam.network/',
 };
 
 export const NETWORKS_DEFAULT_GAS: iParamsPerNetwork<number> = {
@@ -44,4 +47,6 @@ export const NETWORKS_DEFAULT_GAS: iParamsPerNetwork<number> = {
   [ePolygonNetwork.mumbai]: 1 * GWEI,
   [ePolygonNetwork.matic]: 2 * GWEI,
   [eXDaiNetwork.xdai]: 1 * GWEI,
+  [eMoonbeam.dev]: 0,
+  [eMoonbeam.moonbase]: 0,
 };

@@ -25,6 +25,11 @@ export enum eXDaiNetwork {
   xdai = 'xdai',
 }
 
+export enum eMoonbeam {
+  dev = 'dev',
+  moonbase = 'moonbase'
+}
+
 export enum EthereumNetworkNames {
   kovan = 'kovan',
   ropsten = 'ropsten',
@@ -32,6 +37,8 @@ export enum EthereumNetworkNames {
   matic = 'matic',
   mumbai = 'mumbai',
   xdai = 'xdai',
+  dev = 'dev',
+  moonbase = 'moonbase'
 }
 
 export enum AavePools {
@@ -239,6 +246,16 @@ export interface iAssetBase<T> {
   WMATIC: T;
   STAKE: T;
   xSUSHI: T;
+  WDEV: T;
+  MERC: T;
+  VEN: T;
+  ERTH: T;
+  MARS: T;
+  JUP: T;
+  SAT: T;
+  UNS: T;
+  NEPT: T;
+  PLUT: T;
 }
 
 export type iAssetsWithoutETH<T> = Omit<iAssetBase<T>, 'ETH'>;
@@ -305,6 +322,20 @@ export type iXDAIPoolAssets<T> = Pick<
   'DAI' | 'USDC' | 'USDT' | 'WBTC' | 'WETH' | 'STAKE'
 >;
 
+export type iMoonbeamPoolAssets<T> = Pick<
+  iAssetsWithoutUSD<T>,
+  | 'WDEV'
+  | 'MERC'
+  | 'VEN'
+  | 'ERTH'
+  | 'MARS'
+  | 'JUP'
+  | 'SAT'
+  | 'UNS'
+  | 'NEPT'
+  | 'PLUT'
+>;
+
 export type iMultiPoolsAssets<T> = iAssetCommon<T> | iAavePoolAssets<T>;
 
 export type iAavePoolTokens<T> = Omit<iAavePoolAssets<T>, 'ETH'>;
@@ -351,7 +382,17 @@ export enum TokenContractId {
   BptBALWETH = 'BptBALWETH',
   WMATIC = 'WMATIC',
   STAKE = 'STAKE',
-  xSUSHI = 'xSUSHI'
+  xSUSHI = 'xSUSHI',
+  WDEV = 'WDEV',
+  MERC = 'MERC',
+  VEN = 'VEN',
+  ERTH = 'ERTH',
+  MARS = 'MARS',
+  JUP = 'JUP',
+  SAT = 'SAT',
+  UNS = 'UNS',
+  NEPT = 'NEPT',
+  PLUT = 'PLUT',
 }
 
 export interface IReserveParams extends IReserveBorrowParams, IReserveCollateralParams {
