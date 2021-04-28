@@ -4,7 +4,7 @@ export interface SymbolMap<T> {
   [symbol: string]: T;
 }
 
-export type eNetwork = eEthereumNetwork | ePolygonNetwork | eXDaiNetwork;
+export type eNetwork = eEthereumNetwork | ePolygonNetwork | eXDaiNetwork | eMoonbeam;
 
 export enum eEthereumNetwork {
   buidlerevm = 'buidlerevm',
@@ -435,7 +435,8 @@ export interface IMarketRates {
 export type iParamsPerNetwork<T> =
   | iEthereumParamsPerNetwork<T>
   | iPolygonParamsPerNetwork<T>
-  | iXDaiParamsPerNetwork<T>;
+  | iXDaiParamsPerNetwork<T>
+  | iMoonbeamParamsPerNetwork<T>;
 
 export interface iParamsPerNetworkAll<T>
   extends iEthereumParamsPerNetwork<T>,
@@ -459,6 +460,11 @@ export interface iPolygonParamsPerNetwork<T> {
 
 export interface iXDaiParamsPerNetwork<T> {
   [eXDaiNetwork.xdai]: T;
+}
+
+export interface iMoonbeamParamsPerNetwork<T> {
+  [eMoonbeam.dev]: T;
+  [eMoonbeam.moonbase]: T;
 }
 
 export interface iParamsPerPool<T> {
