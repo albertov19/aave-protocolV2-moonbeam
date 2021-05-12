@@ -18,6 +18,8 @@ import {
   iEthereumParamsPerNetwork,
   iPolygonParamsPerNetwork,
   iXDaiParamsPerNetwork,
+  eMoonbeam,
+  iMoonbeamParamsPerNetwork,
 } from './types';
 import { MintableERC20 } from '../types/MintableERC20';
 import { Artifact } from 'hardhat/types';
@@ -153,6 +155,7 @@ export const getParamPerNetwork = <T>(param: iParamsPerNetwork<T>, network: eNet
   } = param as iEthereumParamsPerNetwork<T>;
   const { matic, mumbai } = param as iPolygonParamsPerNetwork<T>;
   const { xdai } = param as iXDaiParamsPerNetwork<T>;
+  const { dev, moonbase } = param as iMoonbeamParamsPerNetwork<T>;
   const MAINNET_FORK = process.env.MAINNET_FORK === 'true';
   if (MAINNET_FORK) {
     return main;
@@ -179,6 +182,10 @@ export const getParamPerNetwork = <T>(param: iParamsPerNetwork<T>, network: eNet
       return mumbai;
     case eXDaiNetwork.xdai:
       return xdai;
+    case eMoonbeam.dev:
+      return dev;
+    case eMoonbeam.moonbase:
+      return moonbase;
   }
 };
 
