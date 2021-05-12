@@ -1,5 +1,5 @@
 import { oneRay, ZERO_ADDRESS } from '../../helpers/constants';
-import { IMaticConfiguration, eMoonbeam} from '../../helpers/types';
+import { IMoonbeamConfiguration, eMoonbeam} from '../../helpers/types';
 
 import { CommonsConfig } from './commons';
 import {
@@ -8,24 +8,29 @@ import {
   strategyUSDT,
   strategyWBTC,
   strategyWETH,
-  strategyMATIC,
+  strategyMoonbeam,
+  strategyMatic,
 } from './reservesConfigs';
 
 // ----------------
 // POOL--SPECIFIC PARAMS
 // ----------------
 
-export const MaticConfig: IMaticConfiguration = {
+export const MoonbeamConfig: IMoonbeamConfiguration = {
   ...CommonsConfig,
-  MarketId: 'Matic Market',
+  MarketId: 'Moonbeam Market',
   ProviderId: 3,    // Unknown?
   ReservesConfig: {
-    DAI: strategyDAI,
-    USDC: strategyUSDC,
-    USDT: strategyUSDT,
-    WBTC: strategyWBTC,
-    WETH: strategyWETH,
-    WMATIC: strategyMATIC,
+    WDEV: strategyMoonbeam,
+    MERC: strategyMoonbeam,
+    VEN: strategyMoonbeam,
+    ERTH: strategyMoonbeam,
+    MARS: strategyMoonbeam,
+    JUP: strategyMoonbeam,
+    SAT: strategyMoonbeam,
+    UNS: strategyMoonbeam,
+    NEPT: strategyMoonbeam,
+    PLUT: strategyMoonbeam,
   },
   ReserveAssets: {
     [eMoonbeam.dev]: {
@@ -45,4 +50,4 @@ export const MaticConfig: IMaticConfiguration = {
   },
 };
 
-export default MaticConfig;
+export default MoonbeamConfig;

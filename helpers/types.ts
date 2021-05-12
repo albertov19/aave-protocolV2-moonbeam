@@ -553,6 +553,10 @@ export interface IMaticConfiguration extends ICommonConfiguration {
   ReservesConfig: iMaticPoolAssets<IReserveParams>;
 }
 
+export interface IMoonbeamConfiguration extends ICommonConfiguration {
+  ReservesConfig: iMoonbeamPoolAssets<IReserveParams>;
+}
+
 export interface IXDAIConfiguration extends ICommonConfiguration {
   ReservesConfig: iXDAIPoolAssets<IReserveParams>;
 }
