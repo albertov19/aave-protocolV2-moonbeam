@@ -122,6 +122,7 @@ export const getLendingRateOracles = (poolConfig: ICommonConfiguration) => {
 
   const MAINNET_FORK = process.env.MAINNET_FORK === 'true';
   const network = MAINNET_FORK ? 'main' : DRE.network.name;
+  console.log("Network is " + network);
   return filterMapBy(LendingRateOracleRatesCommon, (key) =>
     Object.keys(ReserveAssets[network]).includes(key)
   );

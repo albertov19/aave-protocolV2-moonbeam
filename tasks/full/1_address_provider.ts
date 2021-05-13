@@ -35,14 +35,17 @@ task(
     const poolConfig = loadPoolConfig(pool);
     const { ProviderId, MarketId } = poolConfig;
 
-    const providerRegistryAddress = getParamPerNetwork(poolConfig.ProviderRegistry, network);
-    const providerRegistryOwner = getParamPerNetwork(poolConfig.ProviderRegistryOwner, network);
+    //const providerRegistryAddress = getParamPerNetwork(poolConfig.ProviderRegistry, network);
+    //const providerRegistryOwner = getParamPerNetwork(poolConfig.ProviderRegistryOwner, network);
+    const providerRegistryAddress = '0x3B939FeaD1557C741Ff06492FD0127bd287A421e';  // TEMP
+    const providerRegistryOwner = '0x3B939FeaD1557C741Ff06492FD0127bd287A421e';  // TEMP
 
     if (
       !providerRegistryAddress ||
       !isAddress(providerRegistryAddress) ||
       isZeroAddress(providerRegistryAddress)
     ) {
+      console.log("Address is "+ providerRegistryAddress);
       throw Error('config.ProviderRegistry is missing or is not an address.');
     }
 

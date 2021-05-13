@@ -441,6 +441,7 @@ export type iParamsPerNetwork<T> =
 export interface iParamsPerNetworkAll<T>
   extends iEthereumParamsPerNetwork<T>,
     iPolygonParamsPerNetwork<T>,
+    iMoonbeamParamsPerNetwork<T>,  //JUST changed not sure if we need
     iXDaiParamsPerNetwork<T> {}
 
 export interface iEthereumParamsPerNetwork<T> {

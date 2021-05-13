@@ -75,7 +75,7 @@ export const CommonsConfig: ICommonConfiguration = {
     UNS: {
       borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
     },
-    NEP: {
+    NEPT: {
       borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
     },
     PLUT: {
@@ -88,13 +88,13 @@ export const CommonsConfig: ICommonConfiguration = {
 
   // If PoolAdmin/emergencyAdmin is set, will take priority over PoolAdminIndex/emergencyAdminIndex
   PoolAdmin: {
-    [eMoonbeam.dev]: undefined,
-    [eMoonbeam.moonbase]: undefined,
+    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
   },
   PoolAdminIndex: 0,
   EmergencyAdmin: {
-    [eMoonbeam.dev]: undefined,
-    [eMoonbeam.moonbase]: undefined,
+    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
   },
   LendingPool: {
     [eMoonbeam.dev]: '',
@@ -111,11 +111,11 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   ProviderRegistryOwner: {
     [eMoonbeam.dev]: '0x18d9bA2baEfBdE0FF137C4ad031427EF205f1Fd9', // TEMP
-    [eMoonbeam.moonbase]: '0x85e4A467343c0dc4aDAB74Af84448D9c45D8ae6F',  // TEMP
+    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
   },
   LendingRateOracle: {
-    [eMoonbeam.dev]: '',
-    [eMoonbeam.moonbase]: '',
+    [eMoonbeam.dev]: '0x8A32f49FFbA88aba6EFF96F45D8BD1D4b3f35c7D', //TEMPORARY
+    [eMoonbeam.moonbase]: '0x8A32f49FFbA88aba6EFF96F45D8BD1D4b3f35c7D', //TEMPORARY
   },  
   LendingPoolCollateralManager: {
     [eMoonbeam.dev]: '',
@@ -152,8 +152,28 @@ export const CommonsConfig: ICommonConfiguration = {
     },
   },
   ReserveAssets: {
-    [eMoonbeam.moonbase]: {},
-    [eMoonbeam.dev]: {},
+    [eMoonbeam.moonbase]: {
+            MERC: '0xf4706e316819C4B2F20f18B39D47cAd507807d65',
+      VEN: '0xbb94A7C53Efc68A949218201E8248ACd24711E35',
+      ERTH:  '0x5F50c08779c366667E327611cd9D2DC1EA376084',
+      MARS: '0xd53f5eaE58e91a674a232e6B2460deE6B65E2725',
+      JUP: '0x318612c00406C80f7B018Fc53ba1A01DA6C97e90',
+      SAT: '0x5f9D3737a1192103d78CBe2EcADAF2AE824988b4',
+      UNS: '0x03B7007b5204fDDB7cd19Bf2866f29056162433f',
+      NEPT: '0x9d232068e61C3ACb71685a6254a601e236Db8Dda',
+      PLUT: '0xB14B8365b64C15346A9F9834c8f3b62cA77AeF56',
+    },
+    [eMoonbeam.dev]: {
+      MERC: '0xf4706e316819C4B2F20f18B39D47cAd507807d65',
+      VEN: '0xbb94A7C53Efc68A949218201E8248ACd24711E35',
+      ERTH:  '0x5F50c08779c366667E327611cd9D2DC1EA376084',
+      MARS: '0xd53f5eaE58e91a674a232e6B2460deE6B65E2725',
+      JUP: '0x318612c00406C80f7B018Fc53ba1A01DA6C97e90',
+      SAT: '0x5f9D3737a1192103d78CBe2EcADAF2AE824988b4',
+      UNS: '0x03B7007b5204fDDB7cd19Bf2866f29056162433f',
+      NEPT: '0x9d232068e61C3ACb71685a6254a601e236Db8Dda',
+      PLUT: '0xB14B8365b64C15346A9F9834c8f3b62cA77AeF56',
+    },
   },
   ReservesConfig: {},
   ATokenDomainSeparator: {

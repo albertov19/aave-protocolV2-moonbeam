@@ -45,6 +45,7 @@
     "aave:docker:full:migration": "npm run compile && npm run hardhat:docker -- aave:mainnet",
     "aave:kovan:full:migration": "npm run compile && npm run hardhat:kovan -- aave:mainnet --verify",
     "matic:mumbai:full:migration": "npm run compile && npm run hardhat:mumbai matic:mainnet",
+    "moonbeam:moonbeam:full:migration": "npm run compile && npm run hardhat:moonbeam moonbeam:alpha",
     "matic:matic:full:migration": "npm run compile && npm run hardhat:matic matic:mainnet",
     "amm:kovan:full:migration": "npm run compile && npm run hardhat:kovan -- amm:mainnet --verify",
     "aave:kovan:full:initialize": "npm run hardhat:kovan -- full:initialize-lending-pool --verify --pool Aave",

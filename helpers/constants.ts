@@ -69,5 +69,15 @@ export const MOCK_CHAINLINK_AGGREGATORS_PRICES = {
   WMATIC: oneEther.multipliedBy('0.003620948469').toFixed(),
   STAKE: oneEther.multipliedBy('0.003620948469').toFixed(),
   xSUSHI: oneEther.multipliedBy('0.00913428586').toFixed(),
+  WDEV: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  MERC: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  VEN: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  ERTH: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  MARS: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  JUP: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  SAT: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  UNS: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  NEPT: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
+  PLUT: oneEther.multipliedBy('0.00913428586').toFixed(), //TEMPORARY
   USD: '5848466240000000',
 };

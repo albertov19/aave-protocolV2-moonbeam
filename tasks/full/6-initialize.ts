@@ -43,11 +43,10 @@ task('full:initialize-lending-pool', 'Initialize lending pool configuration.')
       } = poolConfig as ICommonConfiguration;
 
       const reserveAssets = await getParamPerNetwork(ReserveAssets, network);
-
+      console.log("Network is "+ network);
       const addressesProvider = await getLendingPoolAddressesProvider();
-
       const testHelpers = await getAaveProtocolDataProvider();
-
+      console.log("We are in 6-initialize.ts");
       const admin = await addressesProvider.getPoolAdmin();
       if (!reserveAssets) {
         throw 'Reserve assets is undefined. Check ReserveAssets configuration at config directory';

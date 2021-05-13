@@ -90,6 +90,36 @@ export const CommonsConfig: ICommonConfiguration = {
     BUSD: {
       borrowRate: oneRay.multipliedBy(0.05).toFixed(),
     },
+    WDEV: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    MERC: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    VEN: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    ERTH: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    MARS: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    JUP: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    SAT: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    UNS: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    NEP: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
+    PLUT: {
+      borrowRate: oneRay.multipliedBy(0.05).toFixed(), // TEMP
+    },
   },
   // ----------------
   // COMMON PROTOCOL ADDRESSES ACROSS POOLS
