@@ -10,17 +10,20 @@ import { getParamPerPool } from './contracts-helpers';
 import AaveConfig from '../markets/aave';
 import MaticConfig from '../markets/matic';
 import AmmConfig from '../markets/amm';
+import MoonbeamConfig from '../markets/moonbeam';
 import { CommonsConfig } from '../markets/aave/commons';
 import { DRE, filterMapBy } from './misc-utils';
 import { tEthereumAddress } from './types';
 import { getParamPerNetwork } from './contracts-helpers';
 import { deployWETHMocked } from './contracts-deployments';
+import { Console } from 'console';
 
 export enum ConfigNames {
   Commons = 'Commons',
   Aave = 'Aave',
   Matic = 'Matic',
   Amm = 'Amm',
+  Moonbeam = 'Moonbeam'
 }
 
 export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
@@ -33,6 +36,8 @@ export const loadPoolConfig = (configName: ConfigNames): PoolConfiguration => {
         return AmmConfig;
     case ConfigNames.Commons:
       return CommonsConfig;
+    case ConfigNames.Moonbeam:
+      return MoonbeamConfig;
     default:
       throw new Error(`Unsupported pool configuration: ${Object.values(ConfigNames)}`);
   }
@@ -53,6 +58,9 @@ export const getReservesConfigByPool = (pool: AavePools): iMultiPoolsAssets<IRes
       },
       [AavePools.matic]: {
         ...MaticConfig.ReservesConfig,
+      },
+      [AavePools.moonbeam]: {
+        ...MoonbeamConfig.ReservesConfig,
       },
     },
     pool
@@ -120,10 +128,16 @@ export const getLendingRateOracles = (poolConfig: ICommonConfiguration) => {
     ReserveAssets,
   } = poolConfig;
 
-  const MAINNET_FORK = process.env.MAINNET_FORK === 'true';
-  const network = MAINNET_FORK ? 'main' : DRE.network.name;
-  console.log("Network is " + network);
-  return filterMapBy(LendingRateOracleRatesCommon, (key) =>
-    Object.keys(ReserveAssets[network]).includes(key)
-  );
+//   const MAINNET_FORK = process.env.MAINNET_FORK === 'true';
+//   const network = MAINNET_FORK ? 'main' : DRE.network.name;
+//   console.log("Network is " + network);
+//   return filterMapBy(LendingRateOracleRatesCommon, (key) =>
+//     Object.keys(ReserveAssets[network]).includes(key)
+//   );
+// };
+const network = process.env.FORK ? process.env.FORK : DRE.network.name;
+console.log("Network is " + network);
+return filterMapBy(LendingRateOracleRatesCommon, (key) =>
+  Object.keys(ReserveAssets[network]).includes(key)
+);
 };

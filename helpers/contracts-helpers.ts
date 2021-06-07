@@ -27,6 +27,7 @@ import { Artifact as BuidlerArtifact } from '@nomiclabs/buidler/types';
 import { verifyContract } from './etherscan-verification';
 import { getIErc20Detailed } from './contracts-getters';
 import { usingTenderly } from './tenderly-utils';
+import MoonbeamConfig from '../markets/moonbeam';
 
 export type MockTokenMap = { [symbol: string]: MintableERC20 };
 
@@ -189,7 +190,7 @@ export const getParamPerNetwork = <T>(param: iParamsPerNetwork<T>, network: eNet
   }
 };
 
-export const getParamPerPool = <T>({ proto, amm, matic }: iParamsPerPool<T>, pool: AavePools) => {
+export const getParamPerPool = <T>({ proto, amm, matic, moonbeam }: iParamsPerPool<T>, pool: AavePools) => {
   switch (pool) {
     case AavePools.proto:
       return proto;
@@ -197,6 +198,8 @@ export const getParamPerPool = <T>({ proto, amm, matic }: iParamsPerPool<T>, poo
       return amm;
     case AavePools.matic:
       return matic;
+    case AavePools.moonbeam:
+      return moonbeam;
     default:
       return proto;
   }

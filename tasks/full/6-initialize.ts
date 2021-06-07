@@ -48,6 +48,7 @@ task('full:initialize-lending-pool', 'Initialize lending pool configuration.')
       const testHelpers = await getAaveProtocolDataProvider();
       console.log("We are in 6-initialize.ts");
       const admin = await addressesProvider.getPoolAdmin();
+      console.log("admin: " + admin);
       if (!reserveAssets) {
         throw 'Reserve assets is undefined. Check ReserveAssets configuration at config directory';
       }

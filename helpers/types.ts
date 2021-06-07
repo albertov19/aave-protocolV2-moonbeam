@@ -45,6 +45,7 @@ export enum AavePools {
   proto = 'proto',
   matic = 'matic',
   amm = 'amm',
+  moonbeam ='moonbeam',
 }
 
 export enum eContractid {
@@ -472,6 +473,7 @@ export interface iParamsPerPool<T> {
   [AavePools.proto]: T;
   [AavePools.matic]: T;
   [AavePools.amm]: T;
+  [AavePools.moonbeam]: T;
 }
 
 export interface iBasicDistributionParams {

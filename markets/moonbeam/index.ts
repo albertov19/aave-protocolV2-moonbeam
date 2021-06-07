@@ -19,7 +19,7 @@ import {
 export const MoonbeamConfig: IMoonbeamConfiguration = {
   ...CommonsConfig,
   MarketId: 'Moonbeam Market',
-  ProviderId: 3,    // Unknown?
+  ProviderId: 4,    // Unknown?
   ReservesConfig: {
     WDEV: strategyMoonbeam,
     MERC: strategyMoonbeam,
