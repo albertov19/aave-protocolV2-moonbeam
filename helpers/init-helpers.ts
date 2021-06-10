@@ -218,10 +218,10 @@ export const initReservesByHelper = async (
   const chunkedInitInputParams = chunk(initInputParams, initChunks);
 
   const configurator = await getLendingPoolConfiguratorProxy();
-  //await waitForTx(await addressProvider.setPoolAdmin(admin));
-
+  await waitForTx(await addressProvider.setPoolAdmin(admin));
   console.log(`- Reserves initialization in ${chunkedInitInputParams.length} txs`);
-  for (let chunkIndex = 0; chunkIndex < chunkedInitInputParams.length; chunkIndex++) {
+  for (let chunkIndex = 1; chunkIndex < chunkedInitInputParams.length; chunkIndex++) {
+    console.log(chunkIndex);
     const tx3 = await waitForTx(
       await configurator.batchInitReserve(chunkedInitInputParams[chunkIndex])
     );
@@ -298,9 +298,10 @@ export const configureReservesByHelper = async (
   ] of Object.entries(reservesParams) as [string, IReserveParams][]) {
     if (baseLTVAsCollateral === '-1') continue;
 
-    const assetAddressIndex = Object.keys(tokenAddresses).findIndex(
-      (value) => value === assetSymbol
-    );
+    // const assetAddressIndex = Object.keys(tokenAddresses).findIndex(
+    //   (value) => value === assetSymbol
+    // );
+    const assetAddressIndex = 0;
     const [, tokenAddress] = (Object.entries(tokenAddresses) as [string, string][])[
       assetAddressIndex
     ];
@@ -341,7 +342,7 @@ export const configureReservesByHelper = async (
     const chunkedInputParams = chunk(inputParams, enableChunks);
 
     console.log(`- Configure reserves in ${chunkedInputParams.length} txs`);
-    for (let chunkIndex = 0; chunkIndex < chunkedInputParams.length; chunkIndex++) {
+    for (let chunkIndex = 1; chunkIndex < chunkedInputParams.length; chunkIndex++) {
       await waitForTx(
         await atokenAndRatesDeployer.configureReserves(chunkedInputParams[chunkIndex], {
           gasLimit: 12000000,
@@ -350,7 +351,7 @@ export const configureReservesByHelper = async (
       console.log(`  - Init for: ${chunkedSymbols[chunkIndex].join(', ')}`);
     }
     // Set deployer back as admin
-    await waitForTx(await addressProvider.setPoolAdmin(admin));
+    //await waitForTx(await addressProvider.setPoolAdmin(admin));
   }
 };
 
@@ -566,7 +567,7 @@ export const initTokenReservesByHelper = async (
   const chunkedInitInputParams = chunk(initInputParams, initChunks);
 
   const configurator = await getLendingPoolConfiguratorProxy();
-  //await waitForTx(await addressProvider.setPoolAdmin(admin));
+  await waitForTx(await addressProvider.setPoolAdmin(admin));
 
   console.log(`- Reserves initialization in ${chunkedInitInputParams.length} txs`);
   for (let chunkIndex = 0; chunkIndex < chunkedInitInputParams.length; chunkIndex++) {

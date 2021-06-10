@@ -98,11 +98,11 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   LendingPool: {
     [eMoonbeam.dev]: '',
-    [eMoonbeam.moonbase]: '0xABdC61Cd16e5111f335f4135B7A0e65Cc7F86327',
+    [eMoonbeam.moonbase]: '',
   },
   LendingPoolConfigurator: {
     [eMoonbeam.dev]: '',
-    [eMoonbeam.moonbase]: '0x17c4A170FFF882862F656597889016D3a6073534',
+    [eMoonbeam.moonbase]: '',
   },
   EmergencyAdminIndex: 1,
   ProviderRegistry: {
@@ -114,8 +114,8 @@ export const CommonsConfig: ICommonConfiguration = {
     [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
   },
   LendingRateOracle: {
-    [eMoonbeam.dev]: '0x8A32f49FFbA88aba6EFF96F45D8BD1D4b3f35c7D', //TEMPORARY
-    [eMoonbeam.moonbase]: '0x8A32f49FFbA88aba6EFF96F45D8BD1D4b3f35c7D', //TEMPORARY
+    [eMoonbeam.dev]: '', //TEMPORARY
+    [eMoonbeam.moonbase]: '', //TEMPORARY
   },  
   LendingPoolCollateralManager: {
     [eMoonbeam.dev]: '',
@@ -131,7 +131,7 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   AaveOracle: {
     [eMoonbeam.dev]: '',
-    [eMoonbeam.moonbase]: '0x1B38fa90596F2C25bCf1B193A6c6a718349AFDfC',
+    [eMoonbeam.moonbase]: '',
   },
   FallbackOracle: {
     [eMoonbeam.dev]: ZERO_ADDRESS,
@@ -139,10 +139,20 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   ChainlinkAggregator: {
     [eMoonbeam.moonbase]: {
-      UNI: '0xeBf79a4aefCFf0E55203fAdEE93417A9E040FEC1', //UNI active on moonbase alpha
-      AAVE: '0x8F23f3cc745993c3164Cb7a852497091A452aA6d', //AAVE contract active on moonbase alpha
-      LINK: '0x4b98A257b73DE965115D8FcD8aCe76249354D994', //LINK active on moonbase alpha
-      WETH: '0xfE6676f8A96005445848632a5A2D67721d584dAd', //ETH active on moonbase alpha
+      // UNI: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5', //UNI active on moonbase alpha
+      // AAVE: '0xD1e52C81FD72fFc6dA3bF083297E6C37852E93DA', //AAVE contract active on moonbase alpha
+      // LINK: '0xC58B34ea686Db2d567835de7AB58fC678b6f186A', //LINK active on moonbase alpha
+      // WETH: '0xE33691Ba3cF532D4025cF0f47679eFe430d4A618', //ETH active on moonbase alpha
+      MERC: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      VEN: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      ERTH: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      MARS: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      JUP: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      SAT: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      UNS: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      NEPT: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      PLUT: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      USD: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
     },
     [eMoonbeam.dev]: {
       DAI: ZERO_ADDRESS,
@@ -153,7 +163,7 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   ReserveAssets: {
     [eMoonbeam.moonbase]: {
-            MERC: '0xf4706e316819C4B2F20f18B39D47cAd507807d65',
+      MERC: '0xf4706e316819C4B2F20f18B39D47cAd507807d65',
       VEN: '0xbb94A7C53Efc68A949218201E8248ACd24711E35',
       ERTH:  '0x5F50c08779c366667E327611cd9D2DC1EA376084',
       MARS: '0xd53f5eaE58e91a674a232e6B2460deE6B65E2725',

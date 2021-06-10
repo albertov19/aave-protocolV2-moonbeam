@@ -172,11 +172,16 @@ export const getPairsTokenAggregator = (
   },
   aggregatorsAddresses: { [tokenSymbol: string]: tEthereumAddress }
 ): [string[], string[]] => {
-  const { ETH, USD, WETH, ...assetsAddressesWithoutEth } = allAssetsAddresses;
+  const { MERC, VEN, ERTH, MARS, JUP, SAT, UNS, NEPT, PLUT, USD, WETH, ...assetsAddressesWithoutEth } = allAssetsAddresses;
+  console.log("Aggregators Addresses:");
+  console.log(allAssetsAddresses);
+  console.log(aggregatorsAddresses);
 
-  const pairs = Object.entries(assetsAddressesWithoutEth).map(([tokenSymbol, tokenAddress]) => {
-    //if (true/*tokenSymbol !== 'WETH' && tokenSymbol !== 'ETH' && tokenSymbol !== 'LpWETH'*/) {
-    const aggregatorAddressIndex = Object.keys(aggregatorsAddresses).findIndex(
+  const pairs = Object.entries(allAssetsAddresses).map(([tokenSymbol, tokenAddress]) => {
+      if (tokenSymbol == 'MERC' || tokenSymbol == 'VEN' || tokenSymbol == 'ERTH' || tokenSymbol == 'MARS' || tokenSymbol == 'JUP'|| tokenSymbol == 'SAT'|| tokenSymbol == 'UNS'|| tokenSymbol == 'NEPT'|| tokenSymbol == 'PLUT'|| tokenSymbol == 'USD') {
+      console.log("tokenSymbol");
+      console.log(tokenSymbol);
+      const aggregatorAddressIndex = Object.keys(aggregatorsAddresses).findIndex(
       (value) => value === tokenSymbol
     );
     const [, aggregatorAddress] = (Object.entries(aggregatorsAddresses) as [
@@ -184,9 +189,11 @@ export const getPairsTokenAggregator = (
       tEthereumAddress
     ][])[aggregatorAddressIndex];
     return [tokenAddress, aggregatorAddress];
-    //}
+  }
   }) as [string, string][];
 
+  console.log("Pairs are");
+  console.log(pairs);
   const mappedPairs = pairs.map(([asset]) => asset);
   const mappedAggregators = pairs.map(([, source]) => source);
 

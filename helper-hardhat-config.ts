@@ -48,5 +48,5 @@ export const NETWORKS_DEFAULT_GAS: iParamsPerNetwork<number> = {
   [ePolygonNetwork.matic]: 2 * GWEI,
   [eXDaiNetwork.xdai]: 1 * GWEI,
   [eMoonbeam.dev]: 0,
-  [eMoonbeam.moonbase]: 0,
+  [eMoonbeam.moonbase]: 1 * GWEI,
 };

@@ -41,13 +41,17 @@ task('full:deploy-oracles', 'Deploy oracles for dev enviroment')
       const fallbackOracleAddress = await getParamPerNetwork(FallbackOracle, network);
       const reserveAssets = await getParamPerNetwork(ReserveAssets, network);
       const chainlinkAggregators = await getParamPerNetwork(ChainlinkAggregator, network);
-
       const tokensToWatch: SymbolMap<string> = {
         ...reserveAssets,
         USD: UsdAddress,
       };
+      console.log("Tokens to Watch");
+      console.log(tokensToWatch);
+      console.log(chainlinkAggregators);
       const [tokens, aggregators] = getPairsTokenAggregator(tokensToWatch, chainlinkAggregators);
-
+      console.log("Oracles Success after lending rates");
+      console.log("Aave oracle address is:");
+      console.log(aaveOracleAddress);
       let aaveOracle: AaveOracle;
       if (notFalsyOrZeroAddress(aaveOracleAddress)) {
         aaveOracle = await await getAaveOracle(aaveOracleAddress);
@@ -62,24 +66,22 @@ task('full:deploy-oracles', 'Deploy oracles for dev enviroment')
           verify
         );
       }
-
       let lendingRateOracle = notFalsyOrZeroAddress(lendingRateOracleAddress)
         ? await getLendingRateOracle(lendingRateOracleAddress)
         : await deployLendingRateOracle(verify);
       const { USD, ...tokensAddressesWithoutUsd } = tokensToWatch;
-
-      lendingRateOracle = lendingRateOracle.connect(
-        DRE.ethers.provider.getSigner(await lendingRateOracle.owner())
-      );
+      // lendingRateOracle = lendingRateOracle.connect(
+      //   DRE.ethers.provider.getSigner(await lendingRateOracle.owner())
+      // );
       // This must be done any time a new market is created I believe
-      //if (!lendingRateOracleAddress) {
-      await setInitialMarketRatesInRatesOracleByHelper(
-        lendingRateOracles,
-        tokensAddressesWithoutUsd,
-        lendingRateOracle,
-        admin
-      );
-      //}
+      // if (!lendingRateOracleAddress) {
+      // await setInitialMarketRatesInRatesOracleByHelper(
+      //   lendingRateOracles,
+      //   tokensAddressesWithoutUsd,
+      //   lendingRateOracle,
+      //   admin
+      // );
+      // }
       console.log('ORACLES: %s and %s', aaveOracle.address, lendingRateOracle.address);
       // Register the proxy price provider on the addressesProvider
       await waitForTx(await addressesProvider.setPriceOracle(aaveOracle.address));
