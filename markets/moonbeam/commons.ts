@@ -101,8 +101,8 @@ export const CommonsConfig: ICommonConfiguration = {
     [eMoonbeam.moonbase]: '',
   },
   LendingPoolConfigurator: {
-    [eMoonbeam.dev]: '',
-    [eMoonbeam.moonbase]: '',
+    [eMoonbeam.dev]: '0xa84caB60db6541573a091e5C622fB79e175E17be',
+    [eMoonbeam.moonbase]: '0xa84caB60db6541573a091e5C622fB79e175E17be',
   },
   EmergencyAdminIndex: 1,
   ProviderRegistry: {
