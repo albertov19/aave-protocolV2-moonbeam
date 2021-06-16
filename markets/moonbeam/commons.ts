@@ -106,11 +106,11 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   EmergencyAdminIndex: 1,
   ProviderRegistry: {
-    [eMoonbeam.dev]: '0x569859d41499B4dDC28bfaA43915051FF0A38a6F', // TEMP
-    [eMoonbeam.moonbase]: '0x28334e4791860a0c1eCF89a62B973ba04a5d643F',  // TEMP
+    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e', // TEMP
+    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
   },
   ProviderRegistryOwner: {
-    [eMoonbeam.dev]: '0x18d9bA2baEfBdE0FF137C4ad031427EF205f1Fd9', // TEMP
+    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e', // TEMP
     [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
   },
   LendingRateOracle: {

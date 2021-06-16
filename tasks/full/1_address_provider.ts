@@ -35,10 +35,8 @@ task(
     const poolConfig = loadPoolConfig(pool);
     const { ProviderId, MarketId } = poolConfig;
 
-    //const providerRegistryAddress = getParamPerNetwork(poolConfig.ProviderRegistry, network);
-    //const providerRegistryOwner = getParamPerNetwork(poolConfig.ProviderRegistryOwner, network);
-    const providerRegistryAddress = '0x3B939FeaD1557C741Ff06492FD0127bd287A421e';  // TEMP
-    const providerRegistryOwner = '0x3B939FeaD1557C741Ff06492FD0127bd287A421e';  // TEMP
+    const providerRegistryAddress = getParamPerNetwork(poolConfig.ProviderRegistry, network);
+    const providerRegistryOwner = getParamPerNetwork(poolConfig.ProviderRegistryOwner, network);
 
     if (
       !providerRegistryAddress ||
