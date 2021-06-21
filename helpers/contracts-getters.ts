@@ -192,8 +192,6 @@ export const getPairsTokenAggregator = (
  // }
   }) as [string, string][];
 
-  console.log("Pairs are");
-  console.log(pairs);
   const mappedPairs = pairs.map(([asset]) => asset);
   const mappedAggregators = pairs.map(([, source]) => source);
 
