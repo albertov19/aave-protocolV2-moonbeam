@@ -88,13 +88,13 @@ export const CommonsConfig: ICommonConfiguration = {
 
   // If PoolAdmin/emergencyAdmin is set, will take priority over PoolAdminIndex/emergencyAdminIndex
   PoolAdmin: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   PoolAdminIndex: 0,
   EmergencyAdmin: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   LendingPool: {
     [eMoonbeam.dev]: '',
@@ -102,16 +102,16 @@ export const CommonsConfig: ICommonConfiguration = {
   },
   LendingPoolConfigurator: {
     [eMoonbeam.dev]: '',
-    [eMoonbeam.moonbase]: '0x8545f883Bcf6E72395fF7d0729d0658AcE10d27b',
+    [eMoonbeam.moonbase]: '0x31D9Af3493D96762993e87cd2D38B00037f7b30c',
   },
   EmergencyAdminIndex: 1,
   ProviderRegistry: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e', // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee', // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   ProviderRegistryOwner: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e', // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee', // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   LendingRateOracle: {
     [eMoonbeam.dev]: '', //TEMPORARY

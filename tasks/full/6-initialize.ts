@@ -90,7 +90,9 @@ task('full:initialize-lending-pool', 'Initialize lending pool configuration.')
       await deployWalletBalancerProvider(verify);
 
       const lendingPoolAddress = await addressesProvider.getLendingPool();
-
+      console.log("THE LENDING POOL ADDRESS IS " + lendingPoolAddress);
+      const lendingPoolConfiguratorAddress = await addressesProvider.getLendingPoolConfigurator();
+      console.log("THE LENDING POOL CONFIGURATOR ADDRESS IS " + lendingPoolConfiguratorAddress);
       let gateWay = getParamPerNetwork(WethGateway, network);
       if (!notFalsyOrZeroAddress(gateWay)) {
         gateWay = (await getWETHGateway()).address;
