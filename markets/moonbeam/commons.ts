@@ -88,30 +88,30 @@ export const CommonsConfig: ICommonConfiguration = {
 
   // If PoolAdmin/emergencyAdmin is set, will take priority over PoolAdminIndex/emergencyAdminIndex
   PoolAdmin: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   PoolAdminIndex: 0,
   EmergencyAdmin: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   LendingPool: {
     [eMoonbeam.dev]: '',
     [eMoonbeam.moonbase]: '',
   },
   LendingPoolConfigurator: {
-    [eMoonbeam.dev]: '0xa84caB60db6541573a091e5C622fB79e175E17be',
-    [eMoonbeam.moonbase]: '0xa84caB60db6541573a091e5C622fB79e175E17be',
+    [eMoonbeam.dev]: '',
+    [eMoonbeam.moonbase]: '0x31D9Af3493D96762993e87cd2D38B00037f7b30c',
   },
   EmergencyAdminIndex: 1,
   ProviderRegistry: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e', // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee', // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   ProviderRegistryOwner: {
-    [eMoonbeam.dev]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e', // TEMP
-    [eMoonbeam.moonbase]: '0x3B939FeaD1557C741Ff06492FD0127bd287A421e',  // TEMP
+    [eMoonbeam.dev]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee', // TEMP
+    [eMoonbeam.moonbase]: '0x708501350B46d45b802e1F4C2B91DBa696F5Ebee',  // TEMP
   },
   LendingRateOracle: {
     [eMoonbeam.dev]: '', //TEMPORARY
@@ -143,16 +143,16 @@ export const CommonsConfig: ICommonConfiguration = {
       // AAVE: '0xD1e52C81FD72fFc6dA3bF083297E6C37852E93DA', //AAVE contract active on moonbase alpha
       // LINK: '0xC58B34ea686Db2d567835de7AB58fC678b6f186A', //LINK active on moonbase alpha
       // WETH: '0xE33691Ba3cF532D4025cF0f47679eFe430d4A618', //ETH active on moonbase alpha
-      MERC: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      VEN: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      ERTH: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      MARS: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      JUP: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      SAT: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      UNS: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      NEPT: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      PLUT: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
-      USD: '0x5Cd72748F94a8597f563D92687A8D2A5074b10E5',
+      MERC: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      VEN: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      ERTH: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      MARS: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      JUP: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      SAT: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      UNS: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      NEPT: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      PLUT: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
+      USD: '0x326997c21451DaB916F9f01684991B6169dAf3E5', //PLACEHOLDER
     },
     [eMoonbeam.dev]: {
       DAI: ZERO_ADDRESS,
