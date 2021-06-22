@@ -18,4 +18,4 @@ coverage
 .DS_Store
 markets/.DS_Store
 tasks/.DS_Store
-tasks/migrations/moonbase.alpha.ts
+
